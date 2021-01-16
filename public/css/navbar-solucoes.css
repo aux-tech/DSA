@@ -1,0 +1,71 @@
+nav div ul li .nav-link,
+nav div ul li div .dropdown-item {
+    color: #DCDCDC;
+    font-size: 20px;
+}
+
+.navbar a {
+    font-family: Bebas Neue;
+    font-size: 22px !important;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    line-height: 1.7;
+    color: #DCDCDC !important;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    filter: brightness(150%);
+}
+
+.nav-transparente {
+    background-color: rgba(0, 0, 0, .6);
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.bg-secondary {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media (min-width: 1200px){
+    .container-navbar {
+        max-width: 1200px;
+    }
+}
+
+.user-login-button{
+    border: 0;
+    background: transparent;
+    transition: all 0.3s;
+    color: #DCDCDC !important;
+}
+.user-login-button:hover{
+    color: rgb(209, 209, 209) !important;
+}
+
+/* Navbar Mobile */
+.navbar-toggler{
+    position: relative;
+    align-self: start;
+    margin-top: 7px;
+    color: #ffc107 !important;
+    border-color: #ffc107 !important;
+}
+.navbar-mobile-opened{
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}

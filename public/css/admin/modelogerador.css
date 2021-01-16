@@ -1,0 +1,36 @@
+.tl {
+    color: #929292;
+}
+
+.tlf {
+    color: #EEE;
+}
+
+.bkpl {
+    background-color: #EEE;
+}
+
+.bkplf {
+    background-color: #98979C;
+}
+
+.brs {
+    border-radius: 5px;
+    border: 5px solid #EEE;
+}
+
+h4.sub-title {
+    white-space: nowrap;
+    font-size: 38px;
+    margin-bottom: 60px !important;
+}
+
+h4.sub-title span {
+    background: linear-gradient(to left, #f8c80a, #f8c80a) no-repeat bottom center;
+    background-size: 100px 3px;
+    background-position: 50% 100%;
+}
+
+.h7 {
+    font-size: 9px;
+}

@@ -1,0 +1,153 @@
+
+/* ==================== Navbar ===================== */
+@import "navbar.css";
+
+/* ==================== Footer ===================== */
+@import "footer.css";
+
+/* ==================== Loader ===================== */
+@import "loader.css";
+
+/* ==================== Contact Form ===================== */
+@import "contact.css";
+
+
+html,
+body{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    background-color: #fefefe;
+}
+
+
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: black;
+    font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+
+#typed {
+    color: #929292;
+    height: 33px;
+}
+
+h2.sub-title {
+    white-space: nowrap;
+    font-size: 38px;
+    margin-bottom: 60px !important;
+}
+
+h2.sub-title span {
+    background: linear-gradient(to left, #f8c80a, #f8c80a) no-repeat bottom center;
+    background-size: 100px 3px;
+    background-position: 50% 100%;
+}
+
+
+.dropdown-divider {
+    border-color: rgb(0, 0, 0, 0.15) !important;
+}
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aligner-item {
+    max-width: 80%;
+}
+
+.Aligner-item--top {
+    align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+    align-self: flex-end;
+}
+
+button {
+    padding: 10px 30px 10px !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url("../fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+
+
+
+
+
+
+/*---------------------------------------------*/
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*---------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0px;
+    text-align: justify;
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+
+
+
+
