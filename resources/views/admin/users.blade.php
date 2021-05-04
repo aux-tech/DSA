@@ -347,8 +347,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                      
                     <button class="btn btn-sm btn-light col-lg-3 col-md-3 col-sm-6" id="botao1">Cadastra Usuários</button>
-                    
-                  
+                 
                   
                 </div>
                 <!-- Card Body -->
@@ -388,15 +387,7 @@
               </div>  
               <div class="col-lg-1"></div> 
                     </div>
-    
-                      
-    
-                      
-    
-                   
-                         
-    
-    
+       
     
     
                 </div>
@@ -492,8 +483,6 @@
         c2.style.display = "none";     
         c3.style.display = "none";  
         c4.style.display = "none";  
-
-        
 
         });
 

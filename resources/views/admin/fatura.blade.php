@@ -1,5 +1,6 @@
 @if (Auth::user()->type == 0)
-    @php
+
+@php
         header('location: client');
     @endphp
 @endif

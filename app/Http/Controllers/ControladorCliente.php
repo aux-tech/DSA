@@ -24,7 +24,9 @@ class ControladorCliente extends Controller
         if (Auth::user()->type == 0)   
             return view('client.index');
         else if (Auth::user()->type == 1)  
-            return view('admin.index');
+            return view('admin.index'); 
+        else if(Auth::user()->type == 2)
+            return view('masteradmin.index');    
         else
             return view('provider.index');
     }

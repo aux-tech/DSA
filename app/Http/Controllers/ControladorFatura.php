@@ -118,7 +118,7 @@ class ControladorFatura extends Controller
 
         }
 
-        return redirect('/fatura');
+        return redirect('/home');
     }
 
     /**

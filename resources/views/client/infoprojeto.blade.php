@@ -12,10 +12,6 @@
           <!-- Content Row -->
   <div class="row">
 
-    
-       
-
-
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
@@ -247,6 +243,50 @@
           <button class="btn btn-primary" onclick="showhide();" style="right: 0px;">Ver mais</button>
           
         </div>
+
+        <div class="cronograms" style="border-bottom: 2px solid #e3e6f0; display: none;"></div>
+                <div class="card-body cronograms" style="display: none;overflow: auto; width:100%; height:auto">
+                  
+                  <div class="row" style="width:2100px; height : 144px;">
+
+                    <div class="col mx-1" style="background:#f8f9fc; ">Projeto</div>
+                    <div class="col mx-1" style="background:#f8f9fc; ">CMD</div>
+                    <div class="col mx-1" style="background:#f8f9fc; ">Colégio Maria Auxiliadora</div>
+
+                    <div class="col mx-1" style="height:100%" >
+                        <div class="row mb-1" style="background:#f8f9fc; height : 70px;">iluminação</div>
+                        <div class="row mt-1" style="background:#f8f9fc; height : 70px;">GD Fotovoltaica</div>
+                    </div>
+
+                    <div class="col-8 mx-1" style="height:100%">
+                      <div class="row mb-1" style="background:#f8f9fc; height : 70px;">iluminação</div>
+                      <div class="row mt-1" style="background: #f8f9fc; height : 70px;">GD Fotovoltaica</div>
+                    </div>
+
+                  </div>
+            
+       </div> 
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var isHide = 1;
+    function showhide(){
+      if(isHide)
+      {
+        isHide = 0;
+        $('.cronograms').show();
+      }
+      else
+      {
+        isHide = 1;
+        $('.cronograms').hide();
+
+      }
+    }
+  </script>
+
         
          
       </div>

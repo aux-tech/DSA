@@ -18,6 +18,7 @@ class CreateUnidadesTable extends Migration
             $table->string('name');
             $table->integer('rede_id')->unsigned();
             $table->timestamps();
+            $table->integer('teste');
         });
     }
 
