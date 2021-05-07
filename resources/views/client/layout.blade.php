@@ -11,8 +11,6 @@
   <meta name="description" content="">
   <meta name="author" content="">
   
-  <script src="{{asset('js/speedometer.js')}}"></script>
-  
 
   <title>Cliente</title>
   
@@ -24,6 +22,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{ asset('css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/speedometer.css') }}" rel="stylesheet">
 
 </head>
 
@@ -384,7 +383,7 @@
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="{{asset('js/admin/sb-admin-2.min.js')}}"></script>  
-
+  <script src="{{asset('js/speedometer.js')}}"></script>
 
 </body>
 

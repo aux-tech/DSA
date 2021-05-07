@@ -22,15 +22,11 @@
               <div class="row">
                  
                             
-                    <canvas class="mx-auto" id="speedometer" width="210px" height="100px">Canvas not available.</canvas>
-                    
-                
-              </div>
-             
-              <script>
-               var speed1 = new  speedometer('speedometer');
-               speed1.drawWithInputValue(100);
-              </script>
+                <div id="el" data-value="0">
+                  <span id="needle"></span>
+                </div>   
+
+              </div>  
               <div id="geracao_mensal_total" class="h5 mb-0 font-weight-bold text-gray-800"></div>
             </div>
             <div class="col-auto">
@@ -50,13 +46,11 @@
             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Instalação Iluminação</div>
              <div class="row">
                  
-                    <canvas  class="mx-auto" id="speedometer2" width="210px" height="100px">Canvas not available.</canvas>
-                    
-              </div>
-            <script>
-             var speed2 = new  speedometer('speedometer2');
-             speed2.drawWithInputValue(95);
-            </script>
+              <div id="el" data-value="0">
+                <span id="needle"></span>
+              </div>  
+
+            </div>   
             <div id="geracao_mensal_total" class="h5 mb-0 font-weight-bold text-gray-800"></div>
           </div>
           <div class="col-auto">
@@ -76,13 +70,11 @@
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Instalação FV</div>
               <div class="row">
                  
-                    <canvas class="mx-auto" id="speedometer3" width="210px" height="100px">Canvas not available.</canvas>
-                   
-              </div>
-              <script>
-                var speed3 = new speedometer('speedometer3');
-                speed3.drawWithInputValue(70);
-              </script>
+                <div id="el" data-value="0">
+                  <span id="needle"></span>
+                </div>   
+
+              </div>   
               <div id="geracao_mensal_total" class="h5 mb-0 font-weight-bold text-gray-800"></div>
             </div>
             <div class="col-auto">
@@ -102,14 +94,11 @@
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">M&V (ex-post)</div>
               <div class="row">
                     
-                    <canvas class="mx-auto" id="speedometer4" width="210px" height="100px">Canvas not available.</canvas>
-                   
-              </div>
-              
-              <script>
-                var speed4 = new speedometer('speedometer4');
-                speed4.drawWithInputValue(45);
-              </script>
+                    <div id="el" data-value="0">
+                      <span id="needle"></span>
+                    </div>   
+                    
+                  </div>      
               <div id="geracao_mensal_total" class="h5 mb-0 font-weight-bold text-gray-800"></div>
             </div>
             <div class="col-auto">
@@ -245,22 +234,22 @@
         </div>
 
         <div class="cronograms" style="border-bottom: 2px solid #e3e6f0; display: none;"></div>
-                <div class="card-body cronograms" style="display: none;overflow: auto; width:100%; height:auto">
+                <div class="card-body cronograms" style="display: none;overflow: auto; width:100%; height:auto ; ">
                   
-                  <div class="row" style="width:2100px; height : 144px;">
+                  <div class="row" style="width:2100px; height : 144px; text-align:center;">
 
-                    <div class="col mx-1" style="background:#f8f9fc; ">Projeto</div>
-                    <div class="col mx-1" style="background:#f8f9fc; ">CMD</div>
-                    <div class="col mx-1" style="background:#f8f9fc; ">Colégio Maria Auxiliadora</div>
+                    <div class="col mx-1" style="background:#f8f9fc; "><p class="mx-auto">Projeto</p></div>
+                    <div class="col mx-1" style="background:#f8f9fc; "><p class="mx-auto">CMD</p></div>
+                    <div class="col mx-1" style="background:#f8f9fc; "><p class="mx-auto">Colégio Maria Auxiliadora</p></div>
 
                     <div class="col mx-1" style="height:100%" >
-                        <div class="row mb-1" style="background:#f8f9fc; height : 70px;">iluminação</div>
-                        <div class="row mt-1" style="background:#f8f9fc; height : 70px;">GD Fotovoltaica</div>
+                        <div class="row mb-1" style="background:#f8f9fc; height : 70px;"><p class="mx-auto">iluminação</p></div>
+                        <div class="row mt-1" style="background:#f8f9fc; height : 70px;"><p class="mx-auto">GD Fotovoltaica</p></div>
                     </div>
 
                     <div class="col-8 mx-1" style="height:100%">
-                      <div class="row mb-1" style="background:#f8f9fc; height : 70px;">iluminação</div>
-                      <div class="row mt-1" style="background: #f8f9fc; height : 70px;">GD Fotovoltaica</div>
+                      <div class="row mb-1" style="background:#f8f9fc; height : 70px;"><p class="mx-auto">iluminação</p></div>
+                      <div class="row mt-1" style="background: #f8f9fc; height : 70px;"><p class="mx-auto">GD Fotovoltaica</p></div>
                     </div>
 
                   </div>

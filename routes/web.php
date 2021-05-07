@@ -20,27 +20,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-/*Routes Admin Master*/
-
-Route::get('/masteradmin', function () {
-    return view('masteradmin.index');
-})->middleware('auth');
-
-/*Routes Admin*/
-
 Route::get('/admin/relatorio', function () {
     return view('admin/relatorio');
-})->middleware('auth');
-
-Route::get('/admin', function () {
-    return view('admin.index'); 
 })->middleware('auth');
 
 Route::get('/usuarios', function () {
     return view('admin.users');
 })->middleware('auth');
-
-/* Routes Clients*/
 
 Route::get('/info', function () {
     return view('client.infoprojeto');
