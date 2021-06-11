@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\redes;
@@ -27,7 +27,7 @@ class ControladorFatura extends Controller
         $unidade = unidades::all();
         $ucs = ucs::all();
         $fatura = faturas::all();
-        return view('admin/fatura', compact('rede','unidade','ucs','fatura'));
+        return view('admin.fatura', compact('rede','unidade','ucs','fatura'));
     }
 
     /**
@@ -48,27 +48,27 @@ class ControladorFatura extends Controller
      */
     public function store(Request $request)
     {
-        if( $request->input('step') == 1)
-        {
-            $user = new User();            
-            $user->email = $request->input('email');
-            $user->name = $request->input('user');
-            $user->password =Hash::make( $request->input('password'));
-            $user->type = 0;
-            $user->save();
 
-            $rede = new redes();
-            $rede->name = $request->input('name');
-            $rede->user_id = $user->id;
+        if( $request->input('step') == 1){
+            $rede = new redes();       
+            $rede->rede = $request->input('rede');
+            $rede->concessionaria = $request->input('concessionaria');
+            $rede->cnpj = $request->input('cnpj');
             $rede->save();
-        }else 
+        } 
         if( $request->input('step') == 2)
         {
             $unidade = new unidades();
-            $unidade->name = $request->input('name');
+            $unidade->unidade = $request->input('unidade');
+            $unidade->cnpj = $request->input('cnpj');
+            $unidade->alunos = $request->input('alunos');
+            $unidade->endereco = $request->input('endereco');
+            $unidade->contato = $request->input('contato');
+            $unidade->numero = $request->input('numero');
+            $unidade->email = $request->input('email');
             $unidade->rede_id = $request->input('rede_id');
             $unidade->save();
-        }else
+        }
         if( $request->input('step') == 3)
         {
             $ucs = new ucs();
@@ -88,7 +88,7 @@ class ControladorFatura extends Controller
             $ucs->dez = str_replace(',','.',str_replace('.','', $request->input('dez')));
             $ucs->unidade_id = $request->input('unidade_id');
             $ucs->save();
-        }else
+        }
         if( $request->input('step') == 4)
         {
             $fatura = new faturas();
@@ -106,19 +106,9 @@ class ControladorFatura extends Controller
             $fatura->saldo_acumulado = str_replace(',','.',str_replace('.','', $request->input('saldo_acumulado')));
             $fatura->uc_id = $request->input('uc_id');
             $fatura->save();
-        }else
-        if( $request->input('step') == 5)
-        {
-            $user = new User();            
-            $user->email = $request->input('email');
-            $user->name = $request->input('user');
-            $user->type = 1;
-            $user->password =Hash::make( $request->input('password'));
-            $user->save();
-
         }
 
-        return redirect('/home');
+        return redirect('fatura');
     }
 
     /**

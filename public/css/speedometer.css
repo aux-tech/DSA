@@ -1,4 +1,4 @@
-#el:before {
+.el:before {
     background: #fbfbfb;
     border-radius: 200px 200px 0 0;
     box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.15) inset;
@@ -8,7 +8,7 @@
     width: 200px;
   }
   
-  #el {
+  .el {
     border-radius: 200px 200px 0 0;
     height: 100px;
     margin: 50px auto 0;
@@ -17,7 +17,7 @@
     width: 200px;
   }
   
-  #el:after {
+  .el:after {
     background: #fff;
     border-radius: 140px 140px 0 0;
     bottom: 0;
@@ -36,7 +36,7 @@
     z-index: 3;
   }
   
-  #el span {
+  .el span {
     background: rgba(252, 202, 0 );
     border-radius: 4px;
     bottom: -4px;
@@ -52,7 +52,7 @@
   }
   
   
-  #el h1,
+  .el h1,
   p,
   strong {
     display: block;
@@ -60,15 +60,15 @@
     text-align: center;
   }
   
-  #el h1 {
+  .el h1 {
     margin-bottom: 0.4em;
   }
   
-  #el p {
+  .el p {
     margin-top: 0;
   }
   
-  #el strong {
+  .el strong {
     color: #efefef;
     font-size: 2.5em;
   }

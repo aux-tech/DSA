@@ -15,10 +15,15 @@ class CreateUnidadesTable extends Migration
     {
         Schema::create('unidades', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('rede_id')->unsigned();
+            $table->string('unidade');
+            $table->string('cnpj');
+            $table->integer('alunos');
+            $table->string('endereco');
+            $table->string('contato');
+            $table->string('numero');
+            $table->string('email');
+            $table->integer('rede_id');
             $table->timestamps();
-            $table->integer('teste');
         });
     }
 

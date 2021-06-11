@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+use App\redes;
+use App\unidades;
+use App\ucs;
+use App\faturas;
+use App\User;
+
 class HomeController extends Controller
 {
     /**
@@ -28,7 +34,7 @@ class HomeController extends Controller
         if (Auth::user()->type == 0)   
             return view('client.index');
         else if(Auth::user()->type == 1 or Auth::user()->type == 2)
-            return view('admin.index');  
+            return view('admin.index');
         else
             return view('index');    
     }

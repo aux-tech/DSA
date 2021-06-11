@@ -14,6 +14,6 @@ class redes extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'id','name', "user_id"
+		'id','rede','concessionaria','cnpj' 
 	];
 }

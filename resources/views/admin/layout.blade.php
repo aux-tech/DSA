@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,21 +8,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  
 
-  <title>Cliente</title>
-  
+  <title>SB Admin 2 - Dashboard</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Custom fonts for this template-->
-  <link href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
-  <link href="{{ asset('css/admin/sb-admin-2.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/speedometer.css') }}" rel="stylesheet">
+   <!-- Custom styles for this template-->
+   <link href="{{asset('css/admin/sb-admin-2.min.css')}}" rel="stylesheet">
+   <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
 </head>
+<style>
+    
+    .disp
+    {
+        border-radius:25px;
+        background-color:#f8f9fa;
+    }
+    
+    h2{
+        color:#ffc107;
+    }
+    
+    .h-90{
+        height:90%;
+    }
+    .w-475{
+        width:47.5%;
+    }
+    input:hover{
+        border-color:#ffc107
+    }
+    
+    </style>
 
 <body id="page-top">
 
@@ -32,7 +50,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" >
 
       <!-- Sidebar - Brand -->
       <div class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -45,84 +63,77 @@
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/home') }}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Painel Administrativo</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
+      <br>
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        INSTITUIÇÕES
       </div>
-
+     
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('info') }}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a name="butadmin" value="1" class="nav-link collapsed" href="{{ url('fatura') }}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Cronogramas</span>
+          <span>Cadastrar</span>
         </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Components:</h6>
+            <a class="collapse-item" href="buttons.html">Buttons</a>
+            <a class="collapse-item" href="cards.html">Cards</a>
+          </div>
+        </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('gestao') }}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="{{url('relatorio')}}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Gestão de Energia</span>
+          <span>Relatório</span>
         </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Utilities:</h6>
+            <a class="collapse-item" href="utilities-color.html">Colors</a>
+            <a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a>
+          </div>
+        </div>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('geracao') }}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Geração Solar</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('consumo') }}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Meu Consumo</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('economia') }}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Minha Economia</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('educacional') }}" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Educacional</span>
-        </a>
-      </li>
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Suporte
+        ADMINISTRATIVO
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="{{url('/usuarios') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Ajuda</span>
+          <span>Usuários</span>
         </a>
-        
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url('/delete') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Gerenciador de Remoção</span>
+        </a>
+      </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url('/edit') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Gerenciador de Edição</span>
+        </a>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
+
+      
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
@@ -151,7 +162,7 @@
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-dark bg-gradient-secondary" type="button">
+                <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
@@ -181,15 +192,11 @@
               </div>
             </li>
 
-
-
-
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              
-            <a class="nav-link dropdown-toggle" href="{{Route('logout')}}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="event.preventDefault();
+              <a class="nav-link dropdown-toggle" href="{{Route('logout')}}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
@@ -225,9 +232,9 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-          @yield('content')
-        </div>
+        
+            @yield('contentadmin')
+    
         <!-- /.container-fluid -->
 
       </div>
@@ -277,10 +284,8 @@
 
 
   <!-- Custom scripts for all pages-->
-  
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="{{asset('js/admin/sb-admin-2.min.js')}}"></script>  
-  <script src="{{asset('js/speedometer.js')}}"></script>
+  <script src="js/admin/sb-admin-2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 </body>
 

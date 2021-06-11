@@ -1,6 +1,6 @@
 
 
-@extends('client/layout')
+@extends('client.layout')
 
 @section('content')
 
@@ -22,7 +22,7 @@
               <br>
               <script>
                 var geracao_mensal;
-                $.getJSON('/client/data',function (produtos){
+                $.getJSON('client.show',function (produtos){
                   geracao_mensal = produtos[0].geracao_mensal;
                   console.log(geracao_mensal);
                   $('#geracao_mensal_total').html(geracao_mensal);

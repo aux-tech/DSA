@@ -162,11 +162,11 @@
 							<nav>
 								<ul id="projetos" class="nav nav-tabs">
 									<li class="nav-item">
-										<button class="nav-link active projetos"onclick="$('.maps').hide();$('#map-0').show();$('.text').hide();$('#text-0').show();">Geral</button>
-									  </li>
-									  <li class="nav-item">
-										<button class="nav-link projetos" onclick="$('.maps').hide();$('#map-3').show();$('.text').hide();$('#text-3').show();">CPFL</button>
-									  </li>
+									<button class="nav-link active projetos"onclick="$('.maps').hide();$('#map-0').show();$('.text').hide();$('#text-0').show();">Geral</button>
+									</li>
+									<li class="nav-item">
+									<button class="nav-link projetos" onclick="$('.maps').hide();$('#map-3').show();$('.text').hide();$('#text-3').show();">CPFL</button>
+									</li>
 									<li class="nav-item">
 									<button class="nav-link projetos"  onclick="$('.maps').hide();$('#map-1').show();$('.text').hide();$('#text-1').show();">RGE</button>
 									</li>

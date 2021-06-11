@@ -14,6 +14,6 @@ class unidades extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'id','name', 'rede_id'
+		'id','unidade', 'cnpj','alunos','endereco','contato','numero','email','rede_id'
 	];
 }

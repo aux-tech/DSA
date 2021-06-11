@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-
-
 Route::get('/', function () {
     return view('index');
 });
@@ -24,8 +22,22 @@ Route::get('/admin/relatorio', function () {
     return view('admin/relatorio');
 })->middleware('auth');
 
-Route::get('/usuarios', function () {
-    return view('admin.users');
+Route::get('/admin/relatorio', function () {
+    return view('admin/relatorio');
+})->middleware('auth');
+
+Route::get('/delete','ControladorDeletar@index')->middleware('auth');
+
+Route::get('/delete/{id}','ControladorDeletar@destroy')->middleware(('auth'));
+
+Route::get('/edit','ControladorEdit@index')->middleware('auth');
+
+Route::get('/edit/{id}','ControladorEdit@index')->middleware('auth');
+
+Route::get('/usuarios', 'ControladorCliente@store')->middleware('auth');
+
+Route::get('/instituicao',function(){
+    return view('admin.instituicoes');
 })->middleware('auth');
 
 Route::get('/info', function () {
@@ -52,11 +64,12 @@ Route::get('/educacional', function () {
     return view('client.educacional');
 })->middleware('auth')->name('educacional');
 
+
 Route::resource('fatura', 'ControladorFatura')->middleware('auth');
 Route::resource('relatorio', 'ControladorRelatorio')->middleware('auth');
 Route::resource('client', 'ControladorCliente')->middleware('auth');
-Route::get('/client/data','ControladorCliente@show')->middleware('auth');
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('deletar','ControladorDeletar')->middleware('auth');
+Route::resource('edit','ControladorEdit')->middleware('auth');
+Route::resource('home', 'HomeController')->middleware('auth');
 
 Auth::routes();

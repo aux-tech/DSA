@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light nav-transparente">
     <div class="container-navbar container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="{{  url('/')  }}">
             <img src="{{asset('content/img/logodsa.svg')}}" width="150" height="auto" class="d-inline-block align-top" />
         </a>
 

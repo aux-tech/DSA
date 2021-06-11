@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 use App\redes;
 use App\unidades;
@@ -21,7 +22,7 @@ class ControladorCliente extends Controller
      */
     public function index()
     {
-        return redirect('/home');
+       
     }
 
     /**
@@ -42,6 +43,42 @@ class ControladorCliente extends Controller
      */
     public function store(Request $request)
     {
+        $rede = redes::all();
+        
+        if( $request->input('stepcadastro') == 1)
+        {
+            $user = new User();            
+            $user->email = $request->input('email');
+            $user->name = $request->input('user');
+            $user->type = 0;
+            $user->password =Hash::make( $request->input('password'));
+            $user->rede = $request->input('rede_id');
+            $user->save();
+
+        }
+        if( $request->input('stepcadastro') == 2)
+        {
+            $user = new User();            
+            $user->email = $request->input('email');
+            $user->name = $request->input('user');
+            $user->type = 1;
+            $user->password =Hash::make( $request->input('password'));
+            $user->save();
+
+        }
+        if( $request->input('stepcadastro') == 3)
+        {
+            if(Auth::user()->type == 2){
+                $user = new User();            
+                $user->email = $request->input('email');
+                $user->name = $request->input('user');
+                $user->type = 2;
+                $user->password =Hash::make( $request->input('password'));
+                $user->save();
+            }
+        }
+
+        return view('admin.users',compact(['rede']) );
     }
 
     /**
@@ -100,6 +137,6 @@ class ControladorCliente extends Controller
      */
     public function destroy($id)
     {
-        //
+          
     }
 }

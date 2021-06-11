@@ -15,8 +15,9 @@ class CreateRedesTable extends Migration
     {
         Schema::create('redes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('user_id');
+            $table->string('rede')->unique();
+            $table->string('concessionaria');
+            $table->string('cnpj');    
             $table->timestamps();
         });
     }
