@@ -60,7 +60,7 @@ header('location: client');
                         </div>
                         <input name="step" value="2" style="display:none">
                         <div class="row my-4">
-                           <input class="col-lg-5 form-control justify-content-center" type="text" placeholder="Colégio" name="unidade">
+                           <input class="col-lg-5 form-control justify-content-center" type="text" placeholder="Unidade" name="unidade">
                            <div class="col-lg-2"></div>
                            <input class="col-lg-5 form-control justify-content-center" type="text" placeholder="CNPJ" name="cnpj">
                         </div>

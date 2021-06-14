@@ -84,7 +84,45 @@ class ControladorUpdate extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+            $redes = redes::all();
+            $unidade = unidades::all();
+            $ucs = ucs::all();
+            $faturas = faturas::all();
+
+            if($request->input('type') == 0){
+                foreach($redes as $rd){
+                    if($rd->id == $id){
+                        $rd->rede = $request->input('name');
+                        $rd->save();
+                    }
+                }        
+            }
+            elseif($request->input('type') == 1){
+                foreach($unidade as $un){
+                    if($un->id == $id){
+                        $un->unidade = $request->input('name');
+                        $un->save();
+                    }
+                }        
+            }
+            elseif($request->input('type') == 2){
+                foreach($ucs as $uc){
+                    if($uc->id == $id){
+                        $uc->name = $request->input('name');
+                        $uc->save();
+                    }
+                }        
+            }
+            elseif($request->input('type') == 3){
+                foreach($faturas as $ft){
+                    if($ft->id == $id){
+                        $ft->data = $request->input('name');
+                        $ft->save();
+                    }
+                }        
+            }
+
+            return redirect('/update');
     }
 
     /**
