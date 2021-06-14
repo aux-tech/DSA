@@ -118,18 +118,13 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/delete') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="{{url('/update') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Gerenciador de Remoção</span>
+          <span>Gerenciador</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('/edit') }}" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Gerenciador de Edição</span>
-        </a>
-      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 

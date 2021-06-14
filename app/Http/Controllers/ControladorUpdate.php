@@ -13,7 +13,7 @@ use App\ucs;
 use App\faturas;
 use App\User;
 
-class ControladorDeletar extends Controller
+class ControladorUpdate extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +28,7 @@ class ControladorDeletar extends Controller
         $faturas = faturas::all();
         $ucs = ucs::all();
 
-        return view('admin.delete',compact(['ucs','unidades','redes','faturas','users']));
+        return view('admin.update',compact(['ucs','unidades','redes','faturas','users']));
     
     }
 
@@ -171,6 +171,6 @@ class ControladorDeletar extends Controller
             }
         }
 
-        return redirect('/delete');
+        return redirect('/update');
     }
 }

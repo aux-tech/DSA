@@ -26,13 +26,11 @@ Route::get('/admin/relatorio', function () {
     return view('admin/relatorio');
 })->middleware('auth');
 
-Route::get('/delete','ControladorDeletar@index')->middleware('auth');
+Route::get('/update','ControladorUpdate@index')->middleware('auth');
 
-Route::get('/delete/{id}','ControladorDeletar@destroy')->middleware(('auth'));
+Route::get('/update/{id}','ControladorUpdate@update')->middleware('auth');
 
-Route::get('/edit','ControladorEdit@index')->middleware('auth');
-
-Route::get('/edit/{id}','ControladorEdit@index')->middleware('auth');
+Route::get('/delete/{id}','ControladorUpdate@destroy')->middleware(('auth'));
 
 Route::get('/usuarios', 'ControladorCliente@store')->middleware('auth');
 
@@ -68,7 +66,7 @@ Route::get('/educacional', function () {
 Route::resource('fatura', 'ControladorFatura')->middleware('auth');
 Route::resource('relatorio', 'ControladorRelatorio')->middleware('auth');
 Route::resource('client', 'ControladorCliente')->middleware('auth');
-Route::resource('deletar','ControladorDeletar')->middleware('auth');
+Route::resource('deletar','ControladorUpdate')->middleware('auth');
 Route::resource('edit','ControladorEdit')->middleware('auth');
 Route::resource('home', 'HomeController')->middleware('auth');
 
