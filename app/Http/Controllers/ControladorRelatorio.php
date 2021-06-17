@@ -90,12 +90,21 @@ class ControladorRelatorio extends Controller
                         $gera[intval(substr($item->date,5,6))+12] = $item->geracao_mensal;
                     }
                     $posi = intval(substr($data_i,5,6));
-                    for($i = 1;$i<=(13-$posi);$i++){
+                    for($i = 0;$i<12;$i++){
+                        if($i+$posi <= 12){
+                            $gerador[$i] = $gera[$i+$posi-1];
+                        }else{
+                            $gerador[$i] = $gera[$i+$posi-13];
+                        }
+
+                    }
+
+                   /* for($i = 1;$i<=(13-$posi);$i++){
                         $gerador[$i]=$gera[$i+$posi -1];
                     }
                     for($i = (14-$posi);$i<13;$i++){
                         $gerador[$i]=$gera[$i + $posi -1];
-                    }
+                    }*/
 
                 }
                 
@@ -122,6 +131,7 @@ class ControladorRelatorio extends Controller
                 
             }
             if($posi != 0){
+                
                 for($k = 0;$k<12;$k++){
                     $aux[$k]=$mesesuc[$k];
                 }

@@ -12,7 +12,7 @@
     "devDependencies": {
         "axios": "^0.21.1",
         "bootstrap": "^4.0.0",
-        "chart.js": "^2.8.0",
+        "chart.js": "^2.9.4",
         "cross-env": "^7.0",
         "jquery": "^3.5.1",
         "laravel-mix": "^5.0.1",
@@ -24,7 +24,6 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "chart.js": "^2.9.3",
         "composer": "^4.1.0",
         "selectize": "^0.12.6"
     }

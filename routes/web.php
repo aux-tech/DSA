@@ -34,10 +34,6 @@ Route::get('/delete/{id}','ControladorUpdate@destroy')->middleware(('auth'));
 
 Route::get('/usuarios', 'ControladorCliente@store')->middleware('auth');
 
-Route::get('/instituicao',function(){
-    return view('admin.instituicoes');
-})->middleware('auth');
-
 Route::get('/info', function () {
     return view('client.infoprojeto');
 })->middleware('auth')->name('info');

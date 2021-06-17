@@ -15,6 +15,8 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
    <!-- Custom styles for this template-->
    <link href="{{asset('css/admin/sb-admin-2.min.css')}}" rel="stylesheet">
    <link href="{{asset('css/app.css')}}" rel="stylesheet">
@@ -72,7 +74,6 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a name="butadmin" value="1" class="nav-link " href="{{ url('fatura') }}" >
-          <i class="fas fa-fw fa-cog"></i>
           <span>Cadastrar</span>
         </a>
       </li>
@@ -80,7 +81,6 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link " href="{{url('relatorio')}}" aria-expanded="true" >
-          <i class="fas fa-fw fa-wrench"></i>
           <span>Relatório</span>
         </a>
 
@@ -97,14 +97,12 @@
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link " href="{{url('/usuarios') }}" >
-          <i class="fas fa-fw fa-folder"></i>
           <span>Usuários</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link " href="{{url('/update') }}" >
-          <i class="fas fa-fw fa-folder"></i>
+        <a class="nav-link " href="{{url('/update') }}" >        
           <span>Gerenciador</span>
         </a>
       </li>
@@ -162,17 +160,9 @@
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
+               
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" href="{{Route('logout')}}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

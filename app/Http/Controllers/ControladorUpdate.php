@@ -88,11 +88,14 @@ class ControladorUpdate extends Controller
             $unidade = unidades::all();
             $ucs = ucs::all();
             $faturas = faturas::all();
+            $users = User::all();
 
             if($request->input('type') == 0){
                 foreach($redes as $rd){
                     if($rd->id == $id){
                         $rd->rede = $request->input('name');
+                        $rd->concessionaria = $request->input('concessionaria');
+                        $rd->cnpj = $request->input('cnpj');
                         $rd->save();
                     }
                 }        
@@ -101,6 +104,12 @@ class ControladorUpdate extends Controller
                 foreach($unidade as $un){
                     if($un->id == $id){
                         $un->unidade = $request->input('name');
+                        $un->cnpj = $request->input('cnpj');
+                        $un->alunos = $request->input('alunos');
+                        $un->endereco = $request->input('endereco');
+                        $un->contato = $request->input('contato');
+                        $un->numero = $request->input('numero');
+                        $un->email = $request->input('email');
                         $un->save();
                     }
                 }        
@@ -109,6 +118,19 @@ class ControladorUpdate extends Controller
                 foreach($ucs as $uc){
                     if($uc->id == $id){
                         $uc->name = $request->input('name');
+                        $uc->tarifa = $request->input('tarifa');
+                        $uc->jan = $request->input('jan');
+                        $uc->fev = $request->input('fev');
+                        $uc->mar = $request->input('mar');
+                        $uc->abr = $request->input('abr');
+                        $uc->mai = $request->input('mai');
+                        $uc->jun = $request->input('jun');
+                        $uc->jul = $request->input('jul');
+                        $uc->ago = $request->input('ago');
+                        $uc->set = $request->input('set');
+                        $uc->out = $request->input('out');
+                        $uc->nov = $request->input('nov');
+                        $uc->dez = $request->input('dez');
                         $uc->save();
                     }
                 }        
@@ -120,6 +142,15 @@ class ControladorUpdate extends Controller
                         $ft->save();
                     }
                 }        
+            }
+            elseif($request->input('type') == 4){
+                foreach($users as $us){
+                    if($us->id == $id){
+                        $us->name = $request->input('name');
+                        $us->email=$request->input('email');
+                        $us->save();
+                    }
+                }
             }
 
             return redirect('/update');

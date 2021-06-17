@@ -6,7 +6,6 @@
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Relatório</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
       </div>
 
       
@@ -39,7 +38,7 @@
                                 @foreach ($unidade as $u)
                                   @foreach ($ucs as $uc)
                                     @if ($r->id == $u->rede_id && $u->id == $uc->unidade_id) 
-                                      <option value="{{$uc->id}}">{{$r->rede}} - {{$u->unidade}} - {{$uc->name}}</option>
+                                      <option  value="{{$uc->id}}">{{$r->rede}} - {{$u->unidade}} - {{$uc->name}}</option>
                                     @endif
                                   @endforeach                                  
                                 @endforeach                            
