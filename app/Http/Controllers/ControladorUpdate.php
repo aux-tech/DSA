@@ -138,7 +138,18 @@ class ControladorUpdate extends Controller
             elseif($request->input('type') == 3){
                 foreach($faturas as $ft){
                     if($ft->id == $id){
-                        $ft->data = $request->input('name');
+                        $ft->date = ($request->input('date')).'-01';
+                        $ft->consumo_ponta = $request->input('cp');
+                        $ft->consumo_fora_ponta = $request->input('cfp');
+                        $ft->consumo_total = $request->input('ct');
+                        $ft->demanda_medida = $request->input('dm');
+                        $ft->demanda_contratada = $request->input('dc');
+                        $ft->custo = $request->input('custo');
+                        $ft->geracao_mensal = $request->input('gm');
+                        $ft->injetada_fp = $request->input('if');
+                        $ft->injetada_p = $request->input('ip');
+                        $ft->saldo_mensal = $request->input('sm');
+                        $ft->saldo_acumulado = $request->input('sa');
                         $ft->save();
                     }
                 }        

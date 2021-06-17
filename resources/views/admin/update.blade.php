@@ -441,8 +441,66 @@
             @method('PUT')
             @csrf
             <br>
-            <h5>Faturas</h5>
-            <input  name="name"  value='{{$ft->data}}'> 
+            <div class="row">
+               <h5 class="col">Date</h5>
+               <input class="col mx-5 form-control justify-content-center" type="month" placeholder="Mês" name="date" value='{{$ft->data}}'> 
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Consumo_Ponta</h5>
+               <input class="col mx-5" name="cp" value='{{$ft->consumo_ponta}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Consumo_fora_ponta</h5>
+               <input class="col mx-5" name="cfp" value='{{$ft->consumo_fora_ponta}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Consumo_total</h5>
+               <input class="col mx-5" name="ct" value='{{$ft->consumo_total}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Demanda_Medida</h5>
+               <input class="col mx-5" name="dm" value='{{$ft->demanda_medida}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Demanda_contratada</h5>
+               <input class="col mx-5" name="dc" value='{{$ft->demanda_contratada}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">custo</h5>
+               <input class="col mx-5" name="custo" value='{{$ft->custo}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">geracao_mensal</h5>
+               <input class="col mx-5" name="gm" value='{{$ft->geracao_mensal}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">injetada_fp</h5>
+               <input class="col mx-5" name="if" value='{{$ft->injetada_fp}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">injetada_p</h5>
+               <input class="col mx-5" name="ip" value='{{$ft->injetada_p}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Saldo_Mensal</h5>
+               <input class="col mx-5" name="sm" value='{{$ft->saldo_mensal}}'>
+            </div>
+            <br>
+            <div class="row">
+               <h5 class="col">Saldo_Acumulado</h5>
+               <input class="col mx-5" name="sa" value='{{$ft->saldo_acumulado}}'>
+            </div>
+            <br>
             <br>
             <br>
             <button type="submit" class="col btn btn-sm btn-light" >Editar</button>
@@ -476,7 +534,13 @@
             <h5 class="col">Users</h5>
             <input  class="col mx-5" name="name"  value='{{$us->name}}'> 
             </div>
-            <br>          
+            <br> 
+            <div class="row">
+            <h5 class="col">Users</h5>
+            <input  class="col mx-5" name="name"  value='{{$us->name}}'> 
+            </div>
+            <br>   
+
                <button type="submit" class="col btn btn-sm btn-light" >Editar</button>        
             
          </form> 
